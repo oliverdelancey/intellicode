@@ -4,7 +4,7 @@ intellicode is an experimental programming language which focuses on:
 * Ease and speed of composition, i.e. it is fast and simple to convert ideas to code.
 * Implementing unusual, nonstandard features, i.e. self- or interfile-modification.
 
-Files that end in *.itc* are intellicode files.
+Files that end in *.itc* are intellicode files. However, for the time being this is merely an arbitrary rule. In theory, the file extension does not matter, as long as the file itself is plaintext.
 
 Manual/reference in progress.
 
