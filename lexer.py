@@ -22,13 +22,15 @@ code = code.split("\n")
 for i in range(len(code)):
     cline = code[i]
     if "#" in cline:
-        return
+        continue
+    elif cline == "":
+        continue
     elif "hello" in cline:
         print("Hello World!")
     elif "get" in cline:
         exec("{0} = input()".format(cline[4:]))
     elif "out" in cline:
-        print(cline[4:])
+        exec("print({0})".format(cline[4:]))
     elif "modme" in cline:
         # add/remove line of code
         ops = cline[6:].split(",")
@@ -45,5 +47,5 @@ for i in range(len(code)):
             selfcode.insert(ops[0], ops[2])
         with open(sys.argv[1], "w") as f:
             f.write(lts(selfcode))
-     else:
+    else:
         print("Error in line {0}: '{1}' | Command not recognized.".format(i + 1, cline))
