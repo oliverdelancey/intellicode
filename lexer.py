@@ -1,5 +1,5 @@
 # this will:
-#   1 execute the commands of the input file one by one
+#   1 execute the commands of the input file one by one --current
 #  or
 #   2 compile a python script to run from the input file
 
@@ -21,7 +21,9 @@ code = code.split("\n")
 # lexer
 for i in range(len(code)):
     cline = code[i]
-    if "hello" in cline:
+    if "#" in cline:
+        return
+    elif "hello" in cline:
         print("Hello World!")
     elif "get" in cline:
         exec("{0} = input()".format(cline[4:]))
@@ -43,3 +45,5 @@ for i in range(len(code)):
             selfcode.insert(ops[0], ops[2])
         with open(sys.argv[1], "w") as f:
             f.write(lts(selfcode))
+     else:
+        print("Error in line {0}: '{1}' | Command not recognized.".format(i + 1, cline))
