@@ -1,0 +1,5 @@
+# this is an example intellicode file
+hello
+out "Input something"
+get a
+out a
