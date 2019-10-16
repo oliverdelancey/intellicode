@@ -1,4 +1,4 @@
-# intellicode v0.03
+# intellicode v1.00
 
 intellicode is an experimental programming language which focuses on:
 * Ease and speed of composition, i.e. it is fast and simple to convert ideas to code.
@@ -51,9 +51,23 @@ out x
 
 Print *x* to the terminal. *x* may be a variable, integer/float, string, list, etc.
 
+## py
+```
+py line_of_python_code
+```
+
+Execute any python code on the line, after *py*.
+
 ### modme
 ```
 modme x, y, z
 ```
 
-Change a specific line(s) of code *x*-1. If *y* == 0, remove. If *y* == 1, replace. If *y* == 2, insert before line *x*. *z* is the line of code if replacing or inserting, and must be a string. WARNING: If *modme* errors out, the entire file may be wiped. Use this command with extreme caution.
+Change a specific line(s) of code *x*-1. If *y* == 0, remove. If *y* == 1, replace. If *y* == 2, insert before line *x*. *z* is the line of code if replacing or inserting, and is **not** in quotes, `""`. WARNING: If *modme* errors out, the entire file may be wiped. Use this command with extreme caution.
+
+### modyou
+```
+modyou x, y, z, w
+```
+
+Change a specific line(s) of code *x*-1 . If *y* == 0, remove. If *y* == 1, replace. If *y* == 2, insert before line *x*. *z* is the name of the file being edited, and is **not** in quotes, `""`. *w* is the line of code if replacing or inserting, and is **not** in quotes, `""`. *modyou* may be used to create a new file if the given filename does not exist. WARNING: If *modyou* errors out, the entire file being edited may be wiped. Use this command with extreme caution.
