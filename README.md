@@ -51,7 +51,7 @@ out x
 
 Print *x* to the terminal. *x* may be a variable, integer/float, string, list, etc.
 
-## py
+### py
 ```
 py line_of_python_code
 ```
